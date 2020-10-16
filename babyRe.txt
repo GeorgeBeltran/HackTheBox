@@ -1,0 +1,25 @@
+Baby_RE (HTB challenge)
+8/4/20
+Compeleted
+
+This is a reverse engineering challange. I looked into
+the tools I can use. None of them were useful or I couldnt use so I was stuck.
+I ended up looking at the permissions that the file has after extracting it. 
+Since it said read and write for owner and overall it mainly said that the 
+executeable file was executable I knew that i had to plug it into the terminal
+to make the file run. Before running it I opened the file using notepad and
+leaf pad. When I opened it with leaf pad on the top it showed some binary and ELF.
+I then opened the file with notepad and quickly saw that i got more binary data.
+I also saw ELF so i went ahead and researched what ELF is. Turns out its the kind 
+of file type so that was a good find i did. Now as i scrolled down on note pad I saw
+some text that said "run 'strings' on this challenge, that is not the way" so i said
+okay i may not have to input any strings or really do a lot of coding. Right next
+to that i saw "Insert key: \00abcde122313" here i saw this key that i had to input
+somewhere but where. So I went on to research on how to make this file execute and I saw 
+that i just go on the terminal cd into the Desktop which is where my file is saved.
+Then i type in "chmod +x baby", this changes the permissions into being able to get
+executed and not just read and write or just read. After i type in "./baby" to go into
+the file and execute it and when i execute it i get a message saying "Insert key:". 
+Here is where i feel like a genius even though this is super easy and say THE KEY FROM
+NOTE PAD!!! I go on and input abcde122313. After i get another message and the final
+message or in terms of hacking i get the flag saying HTB{B4BY_R3V_TH4TS_EZ}. :)
